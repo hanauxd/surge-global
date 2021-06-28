@@ -74,9 +74,7 @@ const Home = () => {
 
   return (
     <Root>
-      {loading && renderLoading()}
-      {error && renderError()}
-      {!loading && !error && renderBookList()}
+      {loading ? renderLoading() : error ? renderError() : renderBookList()}
     </Root>
   );
 };
